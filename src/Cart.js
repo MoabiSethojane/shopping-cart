@@ -2,7 +2,7 @@ import React from 'react'
 import { useCart } from 'react-use-cart';
 const Cart = () => {
     const{ isEmpty,totalUniqueItems ,items,totalItems ,cartTotal, updateItemQuantity,removeItem,emptyCart } = useCart();
-    if(isEmpty) return <h5 className ="text-center ">Cart()</h5>
+    if(isEmpty) return <h5 className ="text-center "><h6 className="carticon">Cart()</h6></h5>
   return (
     <section className="py-4 container">
         <div className="row justify-content-center">
@@ -20,7 +20,7 @@ const Cart = () => {
                                 {item.title}
                             </td>
                             <td>
-                                {item.price }
+                                R{item.price }
                             </td>
                             <td>
                                 Quatity{item.quantity}
